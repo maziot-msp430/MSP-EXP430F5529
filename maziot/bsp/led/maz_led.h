@@ -71,10 +71,10 @@ typedef enum _MAZBSP_LED_STATUS_
 
 typedef struct _MAZBSP_LED_CTRL_
 {
-    MAZBSP_LED_GPIOPORT ledPort;            // 连接LED的GPIOPORT
-    MAZBSP_LED_GPIOPIN ledPin;              // 连接LED的GPIOPIN
-    MAZBSP_LED_GPIOLEVEL ledLight;          // 高电平还是低电平点亮
-    MAZBSP_LED_STATUS ledStatus;            // 默认状态
+    MAZBSP_LED_GPIOPORT port;               // 连接LED的GPIOPORT
+    MAZBSP_LED_GPIOPIN pin;                 // 连接LED的GPIOPIN
+    MAZBSP_LED_GPIOLEVEL light;             // 高电平还是低电平点亮
+    MAZBSP_LED_STATUS status;               // 默认状态
 } MAZBSP_LED_CTRL;
 
 int16_t maz_led_init(void);
