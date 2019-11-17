@@ -49,22 +49,22 @@ int16_t maz_led_set_status(MAZBSP_LED led, MAZBSP_LED_STATUS status)
 
     if (MAZBSP_LED_STATUS_ON == status)
     {
-        if(MAZBSP_LED_GPIOLEVEL_HIGH == pctrl->light)
+        if (MAZBSP_LED_GPIOLEVEL_HIGH == pctrl->light)
         {
             GPIO_setOutputHighOnPin(pctrl->port, pctrl->pin);
         }
-        else if(MAZBSP_LED_GPIOLEVEL_LOW == pctrl->light)
+        else if (MAZBSP_LED_GPIOLEVEL_LOW == pctrl->light)
         {
             GPIO_setOutputLowOnPin(pctrl->port, pctrl->pin);
         }
     }
     else if (MAZBSP_LED_STATUS_OFF == status)
     {
-        if(MAZBSP_LED_GPIOLEVEL_HIGH == pctrl->light)
+        if (MAZBSP_LED_GPIOLEVEL_HIGH == pctrl->light)
         {
             GPIO_setOutputLowOnPin(pctrl->port, pctrl->pin);
         }
-        else if(MAZBSP_LED_GPIOLEVEL_LOW == pctrl->light)
+        else if (MAZBSP_LED_GPIOLEVEL_LOW == pctrl->light)
         {
             GPIO_setOutputHighOnPin(pctrl->port, pctrl->pin);
         }
